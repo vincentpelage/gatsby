@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
-    description: 'A new blog !'
+    description: 'A new blog !',
   },
   plugins: [
     {
@@ -9,6 +9,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogtest`,
+        path: `${__dirname}/src/pages/test`,
       },
     },
     `gatsby-transformer-remark`,
